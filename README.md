@@ -1,4 +1,4 @@
-<h1>Simple Python Flask Dockerized App # </h1>
+<h1>Simple Python Flask Dockerised App # </h1>
 Build the image using the following command
  </div>
 <p className="App-intro">
