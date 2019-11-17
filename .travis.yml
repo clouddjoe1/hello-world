@@ -1,9 +1,18 @@
-language: bash
+language: python
+python:
+  - "3.6"
+  - "3.7"
 
 sudo: required
 
 services:
   - docker
 
+before_script: pip install docker-compose
+
 script:
-  -echo "hello_world"  
+  - docker build -t clouddjoe1/hello_world:latest .
+
+  - docker run -p 3333:3333 clouddjoe1/hello_world
+
+   
