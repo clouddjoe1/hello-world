@@ -15,4 +15,16 @@ script:
 
   - docker run -p 3333:3333 clouddjoe1/hello_world
 
-   
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-2"
+  app: "clouddjoe1"
+  env: "Clouddjoe1-env"
+  bucket_name: "elasticbeanstalk-eu-west-2-792844582498"
+  bucket_path: "clouddjoe1"
+  on:
+    branch:master
+  access_key_id: $AWS_ACCESS_KEY   
+  secret_access_key:
+    secure:"$AWS_SECRET_KEY" 
+
