@@ -1,20 +1,6 @@
-# Disable sudo to speed up the build
-sudo: false
+sudo : false 
+service:
+  - docker
 
-# Set the build language to Python
-language: python
-
-# Set the python version to 2.7
-python: 2.7
-
-# Install the codecov pip dependency
-install:
-  - pip install codecov
-
-# Run the unit test
-script:
-  - coverage run tests.py
-
-# Push the results back to codecov
-after_success:
-  - codecov
+before_install:
+  - docker build -t clouddjoe1/hello_world -f dockerfile    
