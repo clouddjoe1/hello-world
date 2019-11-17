@@ -12,6 +12,9 @@ script:
   - docker build -t clouddjoe1/hello_world:latest .
 
   - docker run -p 3333:3333 clouddjoe1/hello_world
+  - pip install waitress
+  - waitress-serve --call 'flaskr:app.py'
+  - Serving on http://0.0.0.0:3333
 
 deploy:
   provider: elasticbeanstalk
