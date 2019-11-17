@@ -1,4 +1,4 @@
-<h1>  Simple Python Flask Dockerised App #  </h1>
+<h1>  Simple Python Flask Dockerised App  #  </h1>
 
 This application has been tested on Ubuntu 18.04 / 19.04.
 
