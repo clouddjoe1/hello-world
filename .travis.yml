@@ -1,6 +1,11 @@
-sudo : false 
-service:
-  - docker
+language: python
 
-before_install:
-  - docker build -t clouddjoe1/hello_world -f dockerfile    
+python:
+
+  - "2.7.15+"
+  - "3.6.8"
+ 
+
+script: 
+
+  - python app.py
