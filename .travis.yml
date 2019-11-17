@@ -8,8 +8,6 @@ sudo: required
 services:
   - docker
 
-before_script: pip install docker-compose
-
 script:
   - docker build -t clouddjoe1/hello_world:latest .
 
